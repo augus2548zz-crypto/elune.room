@@ -423,8 +423,14 @@
           </button>
         </div>
 
+        <!-- Mobile tap hint -->
+        <p class="text-[11px] text-brand-600 sm:hidden -mt-4 mb-4 flex items-center gap-1 font-light">
+          <i data-lucide="sparkles" class="w-3.5 h-3.5 text-brand-500"></i>
+          <span>แตะที่รูปชุดเพื่อดูสัดส่วนและราคาเช่า 1, 3, 5 วัน</span>
+        </p>
+
         <!-- Dress Cards Grid -->
-        <div id="dressGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div id="dressGrid" class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 sm:gap-6">
           <!-- Populated by JavaScript -->
         </div>
 
@@ -634,6 +640,85 @@
     </div>
   </div>
 
+  <!-- ==================== DRESS DETAIL MODAL ==================== -->
+  <div id="dressModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/60 backdrop-blur-xs transition-opacity duration-300">
+    <div class="relative w-full max-w-lg bg-white rounded-3xl overflow-hidden shadow-2xl border border-brand-200/80 max-h-[90vh] flex flex-col">
+      <!-- Modal Close Button -->
+      <button 
+        onclick="closeDressModal()" 
+        aria-label="Close modal"
+        class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-white/90 backdrop-blur-md border border-brand-200 text-brand-800 hover:bg-brand-100 flex items-center justify-center transition shadow-xs cursor-pointer"
+      >
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Modal Body (Scrollable) -->
+      <div class="overflow-y-auto p-5 sm:p-6 space-y-4">
+        <!-- Image & Badges -->
+        <div class="relative aspect-[3/4] sm:aspect-[4/3] rounded-2xl overflow-hidden bg-brand-100 border border-brand-200/60 max-h-80 mx-auto">
+          <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3">
+            <span id="modalTag" class="px-2.5 py-1 text-[11px] font-semibold tracking-wider uppercase bg-white/90 backdrop-blur-md rounded-full text-brand-900 shadow-xs">
+            </span>
+          </div>
+          <div class="absolute top-3 right-3 sm:right-14">
+            <span id="modalStatus" class="px-2.5 py-1 text-[11px] font-semibold bg-emerald-950/80 text-emerald-300 backdrop-blur-md rounded-full shadow-xs flex items-center gap-1">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+              พร้อมส่ง
+            </span>
+          </div>
+        </div>
+
+        <!-- Info Header -->
+        <div>
+          <div class="flex items-center justify-between text-xs text-brand-600 mb-1">
+            <span>ไซส์: <strong id="modalSizes" class="text-brand-900"></strong></span>
+            <span class="text-brand-500 text-xs">ซักอบแห้งพร้อมสวมใส่ ✨</span>
+          </div>
+          <p id="modalMeasurements" class="text-xs text-brand-700/80 mb-2 font-light">
+            สัดส่วน: <span class="font-medium text-brand-800"></span>
+          </p>
+          <h3 id="modalName" class="text-xl sm:text-2xl font-editorial font-bold text-brand-900"></h3>
+          <p id="modalDesc" class="text-xs sm:text-sm text-brand-700/90 mt-1.5 font-light leading-relaxed"></p>
+        </div>
+
+        <!-- Rental Pricing Preview: 1, 3, 5 Days -->
+        <div class="pt-3 border-t border-brand-100">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs uppercase tracking-wider text-brand-600 font-semibold">อัตราค่าเช่า (Rental Rates)</span>
+            <span class="text-[11px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">พร้อมส่ง</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 p-3 bg-brand-50/90 rounded-2xl border border-brand-200/70 text-center">
+            <div class="py-1">
+              <span class="block text-xs text-brand-600 font-medium">1 วัน</span>
+              <span id="modalPrice1" class="font-editorial text-base sm:text-lg font-bold text-brand-900"></span>
+            </div>
+            <div class="py-1 border-x border-brand-200/80">
+              <span class="block text-xs text-brand-600 font-medium">3 วัน</span>
+              <span id="modalPrice3" class="font-editorial text-base sm:text-lg font-bold text-brand-900"></span>
+            </div>
+            <div class="py-1">
+              <span class="block text-xs text-brand-600 font-medium">5 วัน</span>
+              <span id="modalPrice5" class="font-editorial text-base sm:text-lg font-bold text-brand-900"></span>
+            </div>
+          </div>
+
+          <!-- LINE Booking Button -->
+          <a 
+            id="modalLineBtn"
+            href="https://lin.ee/8MTJcHB" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="mt-4 w-full py-3.5 rounded-2xl bg-brand-900 hover:bg-brand-800 text-white text-sm font-medium transition flex items-center justify-center gap-2 shadow-md hover:shadow-lg cursor-pointer"
+          >
+            <img src="icon/line.png" alt="LINE" class="w-4 h-4 object-contain">
+            <span>สอบถามคิวชุดนี้ทาง LINE</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script>
     // =====================================================
     // DRESS COLLECTION DATA — CONFIGURABLE IMAGES
@@ -835,7 +920,10 @@
       }
 
       grid.innerHTML = displayed.map(item => `
-        <div class="bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
+        <div 
+          onclick="openDressModal(${item.id})"
+          class="bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-brand-200/80 shadow-2xs hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer"
+        >
           <!-- Image Container -->
           <div class="relative aspect-[3/4] overflow-hidden bg-brand-100">
             <img 
@@ -846,15 +934,15 @@
               onerror="this.src='https://placehold.co/600x800/F7F3EB/5A4632?text=elune.room'"
             >
             <!-- Badge Tag -->
-            <div class="absolute top-3 left-3">
-              <span class="px-2.5 py-1 text-[10px] font-semibold tracking-wider uppercase bg-white/90 backdrop-blur-md rounded-full text-brand-900 shadow-xs">
+            <div class="absolute top-1.5 left-1.5 sm:top-3 sm:left-3">
+              <span class="px-1.5 py-0.5 sm:px-2.5 sm:py-1 text-[8px] sm:text-[10px] font-semibold tracking-wider uppercase bg-white/90 backdrop-blur-md rounded-full text-brand-900 shadow-xs">
                 ${item.tag}
               </span>
             </div>
 
-            <!-- Instant Delivery Status Badge -->
-            <div class="absolute top-3 right-3">
-              <span class="px-2.5 py-1 text-[10px] font-semibold bg-emerald-950/80 text-emerald-300 backdrop-blur-md rounded-full shadow-xs flex items-center gap-1">
+            <!-- Instant Delivery Status Badge (Desktop) -->
+            <div class="hidden sm:flex absolute top-3 right-3">
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-emerald-950/80 text-emerald-300 backdrop-blur-md rounded-full shadow-xs items-center gap-1">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                 ${item.status}
               </span>
@@ -862,29 +950,35 @@
           </div>
 
           <!-- Card Content -->
-          <div class="p-5 flex flex-col flex-grow justify-between">
+          <div class="p-2 sm:p-5 flex flex-col flex-grow justify-between">
             <div>
-              <div class="flex items-center justify-between text-xs text-brand-600 mb-1">
+              <div class="flex items-center justify-between text-[9px] sm:text-xs text-brand-600 mb-0.5 sm:mb-1">
                 <span>ไซส์: <strong class="text-brand-900">${item.sizes.join(', ')}</strong></span>
-                <span class="text-brand-500 text-[11px]">ซักอบแห้งพร้อมสวมใส่ ✨</span>
+                <span class="hidden sm:inline text-brand-500 text-[11px]">ซักอบแห้ง ✨</span>
               </div>
 
               ${item.measurements ? `
-              <p class="text-[11px] text-brand-700/80 mb-1.5 font-light">
+              <p class="hidden sm:block text-[11px] text-brand-700/80 mb-1.5 font-light">
                 สัดส่วน: <span class="font-medium text-brand-800">${item.measurements}</span>
               </p>` : ''}
 
-              <h3 class="text-base font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">
+              <h3 class="text-xs sm:text-base font-semibold text-brand-900 group-hover:text-brand-600 transition-colors truncate sm:whitespace-normal">
                 ${item.name}
               </h3>
 
-              <p class="text-xs text-brand-700/80 mt-1 font-light leading-relaxed">
+              <!-- Price summary on mobile -->
+              <div class="mt-1 sm:hidden flex items-center justify-between pt-1 border-t border-brand-100/70">
+                <span class="text-[11px] font-bold text-brand-900 font-editorial">${item.price1}</span>
+                <span class="text-[8px] text-brand-600 bg-brand-100/80 px-1 py-0.5 rounded font-medium">1 วัน</span>
+              </div>
+
+              <p class="hidden sm:block text-xs text-brand-700/80 mt-1 font-light leading-relaxed">
                 ${item.desc}
               </p>
             </div>
 
-            <!-- Rental Pricing Preview: 1, 3, 5 Days -->
-            <div class="mt-4 pt-3 border-t border-brand-100">
+            <!-- Rental Pricing Preview: 1, 3, 5 Days (Desktop) -->
+            <div class="hidden sm:block mt-4 pt-3 border-t border-brand-100">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-[10px] uppercase tracking-wider text-brand-500 font-semibold">อัตราค่าเช่า (Rental Rates)</span>
                 <span class="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">พร้อมส่ง</span>
@@ -904,15 +998,10 @@
                 </div>
               </div>
 
-              <a 
-                href="https://lin.ee/8MTJcHB" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="mt-3 w-full py-2.5 rounded-xl bg-brand-900 hover:bg-brand-700 text-white text-xs font-medium transition flex items-center justify-center gap-1.5 shadow-2xs"
-              >
+              <div class="mt-3 w-full py-2.5 rounded-xl bg-brand-900 group-hover:bg-brand-700 text-white text-xs font-medium transition flex items-center justify-center gap-1.5 shadow-2xs">
                 <img src="icon/line.png" alt="LINE" class="w-3.5 h-3.5 object-contain">
-                <span>สอบถามคิวชุดนี้ทาง LINE</span>
-              </a>
+                <span>ดูรายละเอียด / สอบถามคิว</span>
+              </div>
             </div>
           </div>
         </div>
@@ -933,6 +1022,47 @@
           catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
       }
+    }
+
+    // Dress Detail Modal Controls
+    function openDressModal(id) {
+      const item = dressData.find(d => d.id === id);
+      if (!item) return;
+
+      document.getElementById('modalImage').src = item.image;
+      document.getElementById('modalImage').alt = item.name;
+      document.getElementById('modalTag').textContent = item.tag;
+      document.getElementById('modalSizes').textContent = item.sizes.join(', ');
+      
+      const measEl = document.getElementById('modalMeasurements');
+      if (item.measurements) {
+        measEl.innerHTML = `สัดส่วน: <span class="font-medium text-brand-800">${item.measurements}</span>`;
+        measEl.classList.remove('hidden');
+      } else {
+        measEl.classList.add('hidden');
+      }
+
+      document.getElementById('modalName').textContent = item.name;
+      document.getElementById('modalDesc').textContent = item.desc;
+      document.getElementById('modalPrice1').textContent = item.price1;
+      document.getElementById('modalPrice3').textContent = item.price3;
+      document.getElementById('modalPrice5').textContent = item.price5;
+
+      const modal = document.getElementById('dressModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+
+    function closeDressModal() {
+      const modal = document.getElementById('dressModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
     }
 
     // Category Tabs Handler
@@ -1004,6 +1134,23 @@
       if (window.lucide) {
         lucide.createIcons();
       }
+
+      // Modal outside click listener
+      const dressModal = document.getElementById('dressModal');
+      if (dressModal) {
+        dressModal.addEventListener('click', (e) => {
+          if (e.target === dressModal) {
+            closeDressModal();
+          }
+        });
+      }
+
+      // ESC key listener to close modal
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeDressModal();
+        }
+      });
     });
   </script>
 </body>
