@@ -428,6 +428,21 @@
           <!-- Populated by JavaScript -->
         </div>
 
+        <!-- Show All / Show Less Button Container -->
+        <div id="showAllContainer" class="mt-10 text-center">
+          <button 
+            id="showAllBtn" 
+            onclick="toggleShowAll()" 
+            class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-brand-900 text-white font-medium text-sm hover:bg-brand-800 shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+          >
+            <span>ดูทั้งหมด (Show All)</span>
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </button>
+          <p id="showAllHelperText" class="text-xs text-brand-600 mt-2.5 font-light">
+            แสดง 3 จากทั้งหมด 8 ชุด
+          </p>
+        </div>
+
         <!-- Empty Results Message -->
         <div id="emptyCatalogState" class="hidden text-center py-16">
           <div class="w-16 h-16 rounded-full bg-brand-100 flex items-center justify-center text-brand-500 mx-auto mb-3">
@@ -754,10 +769,14 @@
     ];
 
     let currentCategory = 'all';
+    let isShowAll = false;
 
     function renderDresses() {
       const grid = document.getElementById('dressGrid');
       const emptyState = document.getElementById('emptyCatalogState');
+      const showAllContainer = document.getElementById('showAllContainer');
+      const showAllBtn = document.getElementById('showAllBtn');
+      const showAllHelperText = document.getElementById('showAllHelperText');
       const query = document.getElementById('dressSearch').value.toLowerCase().trim();
 
       const filtered = dressData.filter(item => {
@@ -772,11 +791,50 @@
       if (filtered.length === 0) {
         grid.innerHTML = '';
         emptyState.classList.remove('hidden');
+        if (showAllContainer) showAllContainer.classList.add('hidden');
         return;
       }
 
       emptyState.classList.add('hidden');
-      grid.innerHTML = filtered.map(item => `
+
+      // Pagination / Show All logic: Default to 3 items
+      const totalCount = filtered.length;
+      let displayed = filtered;
+
+      if (totalCount > 3) {
+        if (showAllContainer) {
+          showAllContainer.classList.remove('hidden');
+          if (!isShowAll) {
+            displayed = filtered.slice(0, 3);
+            if (showAllBtn) {
+              showAllBtn.innerHTML = `
+                <span>ดูทั้งหมด (Show All)</span>
+                <i data-lucide="chevron-down" class="w-4 h-4"></i>
+              `;
+            }
+            if (showAllHelperText) {
+              showAllHelperText.innerHTML = `แสดง 3 จากทั้งหมด ${totalCount} ชุด`;
+            }
+          } else {
+            displayed = filtered;
+            if (showAllBtn) {
+              showAllBtn.innerHTML = `
+                <span>แสดงน้อยลง (Show Less)</span>
+                <i data-lucide="chevron-up" class="w-4 h-4"></i>
+              `;
+            }
+            if (showAllHelperText) {
+              showAllHelperText.innerHTML = `กำลังแสดงชุดทั้งหมด ${totalCount} ชุด`;
+            }
+          }
+        }
+      } else {
+        if (showAllContainer) {
+          showAllContainer.classList.add('hidden');
+        }
+      }
+
+      grid.innerHTML = displayed.map(item => `
         <div class="bg-white rounded-2xl overflow-hidden border border-brand-200/80 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col group">
           <!-- Image Container -->
           <div class="relative aspect-[3/4] overflow-hidden bg-brand-100">
@@ -866,9 +924,21 @@
       }
     }
 
+    function toggleShowAll() {
+      isShowAll = !isShowAll;
+      renderDresses();
+      if (!isShowAll) {
+        const catalogEl = document.getElementById('catalog');
+        if (catalogEl) {
+          catalogEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    }
+
     // Category Tabs Handler
     function setCategory(cat) {
       currentCategory = cat;
+      isShowAll = false;
       const buttons = document.querySelectorAll('.cat-btn');
       buttons.forEach(btn => {
         btn.classList.remove('border-brand-900', 'bg-brand-900', 'text-white');
@@ -883,12 +953,24 @@
     }
 
     function filterDresses() {
+      isShowAll = false;
       renderDresses();
     }
 
     function resetFilters() {
       document.getElementById('dressSearch').value = '';
       currentCategory = 'all';
+      isShowAll = false;
+      const buttons = document.querySelectorAll('.cat-btn');
+      buttons.forEach((btn, index) => {
+        if (index === 0) {
+          btn.classList.remove('border-brand-200', 'bg-white', 'text-brand-800');
+          btn.classList.add('border-brand-900', 'bg-brand-900', 'text-white');
+        } else {
+          btn.classList.remove('border-brand-900', 'bg-brand-900', 'text-white');
+          btn.classList.add('border-brand-200', 'bg-white', 'text-brand-800');
+        }
+      });
       renderDresses();
     }
 
