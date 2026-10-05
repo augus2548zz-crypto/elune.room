@@ -110,19 +110,19 @@
 
       <!-- Desktop Nav Links -->
       <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-brand-800">
-        <a href="#catalog" class="hover:text-brand-500 transition-colors">คอลเลกชัน</a>
+        <a href="#brands" class="hover:text-brand-500 transition-colors">แบรนด์ที่มีให้เช่า</a>
         <a href="#why-us" class="hover:text-brand-500 transition-colors">จุดเด่นของเรา</a>
+        <a href="#catalog" class="hover:text-brand-500 transition-colors">คอลเลกชัน</a>
         <a href="#steps" class="hover:text-brand-500 transition-colors">ขั้นตอนการเช่า</a>
-        <a href="#reviews" class="hover:text-brand-500 transition-colors">เสียงจากลูกค้า</a>
         <a href="#faq" class="hover:text-brand-500 transition-colors">คำถามที่พบบ่อย</a>
       </nav>
 
       <!-- Action Button -->
       <div class="flex items-center space-x-3">
-        <button onclick="openBookingModal()" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium text-white bg-brand-900 hover:bg-brand-700 transition shadow-sm hover:shadow-md">
-          <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-          <span>จองชุด</span>
-        </button>
+        <a href="https://lin.ee/8MTJcHB" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium text-white bg-brand-900 hover:bg-brand-700 transition shadow-sm hover:shadow-md">
+          <img src="icon/line.png" alt="LINE" class="w-3.5 h-3.5 object-contain">
+          <span>ติดต่อเช่าชุด</span>
+        </a>
         <!-- Mobile Menu Toggle Button -->
         <button id="mobileMenuBtn" aria-label="Open navigation menu" class="md:hidden p-2 rounded-lg text-brand-900 hover:bg-brand-100 transition">
           <i data-lucide="menu" class="w-6 h-6"></i>
@@ -132,15 +132,16 @@
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobileMenu" class="hidden md:hidden bg-brand-50 border-b border-brand-200 px-6 py-6 space-y-4">
-      <a href="#catalog" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">คอลเลกชัน</a>
+      <a href="#brands" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">แบรนด์ที่มีให้เช่า</a>
       <a href="#why-us" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">จุดเด่นของเรา</a>
+      <a href="#catalog" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">คอลเลกชัน</a>
       <a href="#steps" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">ขั้นตอนการเช่า</a>
-      <a href="#reviews" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">เสียงจากลูกค้า</a>
       <a href="#faq" onclick="closeMobileMenu()" class="block text-base font-medium text-brand-900 py-1">คำถามที่พบบ่อย</a>
       <div class="pt-2">
-        <button onclick="openBookingModal(); closeMobileMenu();" class="w-full text-center py-3 bg-brand-900 text-white rounded-xl font-medium text-sm flex items-center justify-center gap-2">
-          <i data-lucide="sparkles" class="w-4 h-4"></i> จองชุด / สอบถามรายละเอียด
-        </button>
+        <a href="https://lin.ee/8MTJcHB" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="w-full text-center py-3 bg-brand-900 text-white rounded-xl font-medium text-sm flex items-center justify-center gap-2">
+          <img src="icon/line.png" alt="LINE" class="w-4 h-4 object-contain">
+          <span>ติดต่อเช่าชุดทาง LINE</span>
+        </a>
       </div>
     </div>
   </header>
@@ -182,19 +183,19 @@
             <!-- CTA Buttons -->
             <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <a href="#catalog" class="px-8 py-3.5 rounded-full bg-brand-900 text-white font-medium text-sm text-center shadow-md hover:bg-brand-800 hover:shadow-lg transition-all flex items-center justify-center gap-2">
-                <span>ชมคอลเลกชันทั้งหมด</span>
+                <span>ชมคอลเลกชันชุด</span>
                 <i data-lucide="arrow-right" class="w-4 h-4"></i>
               </a>
-              <button onclick="openBookingModal()" class="px-8 py-3.5 rounded-full bg-white border border-brand-300 text-brand-900 font-medium text-sm text-center hover:bg-brand-50 transition shadow-2xs flex items-center justify-center gap-2">
-                <i data-lucide="message-circle" class="w-4 h-4 text-brand-600"></i>
-                <span>สอบถามและจองชุด</span>
-              </button>
+              <a href="https://lin.ee/8MTJcHB" target="_blank" rel="noopener noreferrer" class="px-8 py-3.5 rounded-full bg-white border border-brand-300 text-brand-900 font-medium text-sm text-center hover:bg-brand-50 transition shadow-2xs flex items-center justify-center gap-2">
+                <img src="icon/line.png" alt="LINE" class="w-4 h-4 object-contain">
+                <span>สอบถามเช่าชุดทาง LINE</span>
+              </a>
             </div>
 
             <!-- Trust Micro-Badges -->
             <div class="pt-6 border-t border-brand-200/80 grid grid-cols-3 gap-4 text-center sm:text-left">
               <div>
-                <p class="font-editorial text-2xl sm:text-3xl font-bold text-brand-900">300+</p>
+                <p class="font-editorial text-2xl sm:text-3xl font-bold text-brand-900">50+</p>
                 <p class="text-[11px] sm:text-xs text-brand-600 uppercase tracking-wide">ชุดดีไซน์เนอร์พร้อมให้บริการ</p>
               </div>
               <div>
@@ -217,16 +218,16 @@
               <!-- Main Hero Image Showcase -->
               <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white aspect-[3/4] bg-brand-100">
                 <img 
-                  src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=900&q=80" 
-                  alt="elune.room luxury dress rental" 
+                  src="picture/1.jpg" 
+                  alt="prime_official - elune.room" 
                   class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
                   onerror="this.src='https://placehold.co/600x800/F7F3EB/5A4632?text=elune.room+Boutique'"
                 >
                 <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 <div class="absolute bottom-4 left-4 right-4 text-white">
                   <span class="text-[11px] uppercase tracking-widest bg-white/30 backdrop-blur-md px-2.5 py-1 rounded-full font-medium">New Arrival</span>
-                  <h2 class="text-xl font-editorial font-semibold mt-1.5">Aura Silk Satin Maxi</h2>
-                  <p class="text-xs text-white/80">พร้อมจัดส่งทันที • เริ่มต้น ฿450 / 3 วัน</p>
+                  <h2 class="text-xl font-editorial font-semibold mt-1.5">prime_official</h2>
+                  <p class="text-xs text-white/80">พร้อมจัดส่งทันที • เริ่มต้น ฿300 / 1 วัน</p>
                 </div>
               </div>
 
@@ -248,7 +249,79 @@
       </div>
     </section>
 
-    <section id="why-us" class="py-16 bg-white/60 border-y border-brand-200/50">
+    <!-- ==================== BRANDS FOR RENT ==================== -->
+    <section id="brands" class="py-14 md:py-20 bg-white/80 border-t border-brand-200/60">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs uppercase tracking-[0.2em] font-medium text-brand-600">Curated Boutique Labels</span>
+          <h2 class="text-3xl sm:text-4xl font-editorial font-bold text-brand-900 mt-1">
+            Brands for Rent
+          </h2>
+          <p class="text-sm text-brand-700/80 mt-2 font-light">
+            รวบรวมแบรนด์ชุดออกงาน คาเฟ่ และบิกินี่ยอดนิยม พร้อมให้บริการเช่าในราคาสุดคุ้ม
+          </p>
+          <div class="w-12 h-0.5 bg-brand-400 mx-auto mt-3"></div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+          <!-- Brand 1: prime_official -->
+          <div class="bg-brand-50/70 hover:bg-white p-4 sm:p-6 rounded-2xl border border-brand-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 sm:p-2.5 shadow-xs border border-brand-200/60 flex items-center justify-center overflow-hidden mb-3.5 group-hover:scale-105 transition-transform duration-300">
+              <img src="Logo of brand/prime_official.jpg" alt="prime_official" class="w-full h-full object-contain">
+            </div>
+            <h3 class="text-sm sm:text-base font-semibold text-brand-900">prime_official</h3>
+            <span class="inline-block mt-1.5 text-[11px] sm:text-xs text-brand-600 bg-brand-100/90 px-2.5 py-0.5 rounded-full font-medium">ชุดออกงาน ดินเนอร์</span>
+          </div>
+
+          <!-- Brand 2: rudyy.co -->
+          <div class="bg-brand-50/70 hover:bg-white p-4 sm:p-6 rounded-2xl border border-brand-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 sm:p-2.5 shadow-xs border border-brand-200/60 flex items-center justify-center overflow-hidden mb-3.5 group-hover:scale-105 transition-transform duration-300">
+              <img src="Logo of brand/rudyy.co.jpg" alt="rudyy.co" class="w-full h-full object-contain">
+            </div>
+            <h3 class="text-sm sm:text-base font-semibold text-brand-900">rudyy.co</h3>
+            <span class="inline-block mt-1.5 text-[11px] sm:text-xs text-brand-600 bg-brand-100/90 px-2.5 py-0.5 rounded-full font-medium">ออกงาน & คาเฟ่</span>
+          </div>
+
+          <!-- Brand 3: serlyn.official -->
+          <div class="bg-brand-50/70 hover:bg-white p-4 sm:p-6 rounded-2xl border border-brand-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 sm:p-2.5 shadow-xs border border-brand-200/60 flex items-center justify-center overflow-hidden mb-3.5 group-hover:scale-105 transition-transform duration-300">
+              <img src="Logo of brand/serlyn.official.jpg" alt="serlyn.official" class="w-full h-full object-contain">
+            </div>
+            <h3 class="text-sm sm:text-base font-semibold text-brand-900">serlyn.official</h3>
+            <span class="inline-block mt-1.5 text-[11px] sm:text-xs text-brand-600 bg-brand-100/90 px-2.5 py-0.5 rounded-full font-medium">ออกงาน & คาเฟ่</span>
+          </div>
+
+          <!-- Brand 4: iceblink.summer -->
+          <div class="bg-brand-50/70 hover:bg-white p-4 sm:p-6 rounded-2xl border border-brand-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 sm:p-2.5 shadow-xs border border-brand-200/60 flex items-center justify-center overflow-hidden mb-3.5 group-hover:scale-105 transition-transform duration-300">
+              <img src="Logo of brand/iceblink.summer.jpg" alt="iceblink.summer" class="w-full h-full object-contain">
+            </div>
+            <h3 class="text-sm sm:text-base font-semibold text-brand-900">iceblink.summer</h3>
+            <span class="inline-block mt-1.5 text-[11px] sm:text-xs text-brand-600 bg-brand-100/90 px-2.5 py-0.5 rounded-full font-medium">บิกินี่ เที่ยวทะเล</span>
+          </div>
+
+          <!-- Brand 5: amelie -->
+          <div class="bg-brand-50/70 hover:bg-white p-4 sm:p-6 rounded-2xl border border-brand-200/80 shadow-2xs hover:shadow-md transition-all duration-300 flex flex-col items-center text-center group">
+            <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl bg-white p-2 sm:p-2.5 shadow-xs border border-brand-200/60 flex items-center justify-center overflow-hidden mb-3.5 group-hover:scale-105 transition-transform duration-300">
+              <img src="Logo of brand/amelie.webp" alt="amelie" class="w-full h-full object-contain">
+            </div>
+            <h3 class="text-sm sm:text-base font-semibold text-brand-900">amelie</h3>
+            <span class="inline-block mt-1.5 text-[11px] sm:text-xs text-brand-600 bg-brand-100/90 px-2.5 py-0.5 rounded-full font-medium">ชุดออกงาน ดินเนอร์</span>
+          </div>
+        </div>
+
+        <!-- Trust Sub-banner -->
+        <div class="mt-10 text-center">
+          <p class="text-xs text-brand-600 font-light flex items-center justify-center gap-1.5">
+            <i data-lucide="sparkles" class="w-4 h-4 text-brand-500"></i>
+            <span>ชุดแบรนด์เนมแท้ 100% ผ่านการซักอบฆ่าเชื้อมาตรฐาน พร้อมจัดส่งด่วน 24 ชม. ทั่วบางแสน–ศรีราชา</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY CHOOSE US ==================== -->
+    <section id="why-us" class="py-16 md:py-20 bg-brand-50/40 border-y border-brand-200/50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-14">
           <span class="text-xs uppercase tracking-[0.2em] font-medium text-brand-600">The elune Experience</span>
@@ -260,7 +333,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Feature 1 -->
-          <div class="p-6 rounded-2xl bg-brand-50/70 border border-brand-200/70 hover:shadow-md transition group">
+          <div class="p-6 rounded-2xl bg-white border border-brand-200/80 shadow-2xs hover:shadow-md transition group">
             <div class="w-12 h-12 rounded-xl bg-brand-200 flex items-center justify-center text-brand-800 mb-4 group-hover:scale-110 transition-transform">
               <i data-lucide="bike" class="w-6 h-6"></i>
             </div>
@@ -271,7 +344,7 @@
           </div>
 
           <!-- Feature 2 -->
-          <div class="p-6 rounded-2xl bg-brand-50/70 border border-brand-200/70 hover:shadow-md transition group">
+          <div class="p-6 rounded-2xl bg-white border border-brand-200/80 shadow-2xs hover:shadow-md transition group">
             <div class="w-12 h-12 rounded-xl bg-brand-200 flex items-center justify-center text-brand-800 mb-4 group-hover:scale-110 transition-transform">
               <i data-lucide="sparkles" class="w-6 h-6"></i>
             </div>
@@ -282,7 +355,7 @@
           </div>
 
           <!-- Feature 3 -->
-          <div class="p-6 rounded-2xl bg-brand-50/70 border border-brand-200/70 hover:shadow-md transition group">
+          <div class="p-6 rounded-2xl bg-white border border-brand-200/80 shadow-2xs hover:shadow-md transition group">
             <div class="w-12 h-12 rounded-xl bg-brand-200 flex items-center justify-center text-brand-800 mb-4 group-hover:scale-110 transition-transform">
               <i data-lucide="heart-handshake" class="w-6 h-6"></i>
             </div>
@@ -293,7 +366,7 @@
           </div>
 
           <!-- Feature 4 -->
-          <div class="p-6 rounded-2xl bg-brand-50/70 border border-brand-200/70 hover:shadow-md transition group">
+          <div class="p-6 rounded-2xl bg-white border border-brand-200/80 shadow-2xs hover:shadow-md transition group">
             <div class="w-12 h-12 rounded-xl bg-brand-200 flex items-center justify-center text-brand-800 mb-4 group-hover:scale-110 transition-transform">
               <i data-lucide="ruler" class="w-6 h-6"></i>
             </div>
@@ -317,7 +390,7 @@
               คอลเลกชันยอดนิยม
             </h2>
             <p class="text-sm text-brand-700/80 mt-1 font-light">
-              เลือกชมชุดตามประเภทที่ต้องการ หรือกดปุ่ม "สนใจเช่า" เพื่อจองผ่าน LINE Official ได้ทันที
+              พรีวิวแบบชุดสวยและอัตราค่าเช่า 1 วัน / 3 วัน / 5 วัน สนใจเช่าชุดใดสามารถสอบถามคิวกับแอดมินทาง LINE Official ได้ทันทีค่ะ
             </p>
           </div>
 
@@ -340,16 +413,13 @@
             ทั้งหมด (All)
           </button>
           <button onclick="setCategory('gala')" class="cat-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium border border-brand-200 bg-white text-brand-800 hover:border-brand-400 transition">
-            ชุดออกงาน / ดินเนอร์
+            ชุดออกงาน ดินเนอร์
           </button>
-          <button onclick="setCategory('beach')" class="cat-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium border border-brand-200 bg-white text-brand-800 hover:border-brand-400 transition">
-            ชุดเที่ยวทะเล / คาเฟ่
+          <button onclick="setCategory('cafe')" class="cat-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium border border-brand-200 bg-white text-brand-800 hover:border-brand-400 transition">
+            ชุดเที่ยวคาเฟ่ everyday look
           </button>
-          <button onclick="setCategory('minimal')" class="cat-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium border border-brand-200 bg-white text-brand-800 hover:border-brand-400 transition">
-            มินิมอล & Everyday
-          </button>
-          <button onclick="setCategory('prom')" class="cat-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium border border-brand-200 bg-white text-brand-800 hover:border-brand-400 transition">
-            งานพรอม & บายเนียร์
+          <button onclick="setCategory('bikini')" class="cat-btn whitespace-nowrap px-5 py-2 rounded-full text-xs font-medium border border-brand-200 bg-white text-brand-800 hover:border-brand-400 transition">
+            บิกินี่ เที่ยวทะเล
           </button>
         </div>
 
@@ -387,18 +457,18 @@
           <!-- Step 1 -->
           <div class="bg-white p-6 rounded-2xl border border-brand-200/80 shadow-2xs relative">
             <span class="font-editorial text-4xl font-bold text-brand-300">01</span>
-            <h3 class="text-base font-semibold text-brand-900 mt-2 mb-1">เลือกชุดที่ต้องการ</h3>
+            <h3 class="text-base font-semibold text-brand-900 mt-2 mb-1">เลือกชมชุดที่ชอบ</h3>
             <p class="text-xs text-brand-700/80 leading-relaxed font-light">
-              เลือกชุดจากคอลเลกชันที่สนใจ พร้อมระบุไซส์และวันที่ต้องการใช้งาน จากนั้นติดต่อทีมงานผ่าน LINE Official
+              เลือกดูแบบชุดและตรวจสอบอัตราค่าเช่า 1 วัน, 3 วัน หรือ 5 วัน ได้อย่างสะดวกผ่านหน้าเว็บไซต์
             </p>
           </div>
 
           <!-- Step 2 -->
           <div class="bg-white p-6 rounded-2xl border border-brand-200/80 shadow-2xs relative">
             <span class="font-editorial text-4xl font-bold text-brand-300">02</span>
-            <h3 class="text-base font-semibold text-brand-900 mt-2 mb-1">ยืนยันการจองและชำระเงิน</h3>
+            <h3 class="text-base font-semibold text-brand-900 mt-2 mb-1">เช็กคิวว่างทาง LINE</h3>
             <p class="text-xs text-brand-700/80 leading-relaxed font-light">
-              ยืนยันรายละเอียดการจอง พร้อมชำระค่าเช่าและเงินประกันชุด (ทางร้านคืนเงินประกันเต็มจำนวนหลังตรวจสอบสภาพชุด)
+              แคปรูปชุดที่สนใจแล้วทักหาแอดมินทาง LINE Official เพื่อตรวจสอบคิวว่างและยืนยันการเช่าชุด
             </p>
           </div>
 
@@ -427,95 +497,7 @@
       </div>
     </section>
 
-    <section id="reviews" class="py-16 bg-white/70 border-t border-brand-200/50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-xs uppercase tracking-[0.2em] font-medium text-brand-600">Client Testimonials</span>
-          <h2 class="text-3xl sm:text-4xl font-editorial font-bold text-brand-900 mt-1">
-            เสียงตอบรับจากลูกค้า
-          </h2>
-          <p class="text-sm text-brand-700/80 mt-1 font-light">ความไว้วางใจจากลูกค้าในพื้นที่บางแสน ศรีราชา และชลบุรี</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Review 1 -->
-          <div class="bg-brand-50 p-6 rounded-2xl border border-brand-200 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-amber-500 mb-3">
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-              </div>
-              <p class="text-xs sm:text-sm text-brand-900 font-light leading-relaxed italic">
-                "ประทับใจมากค่ะ ติดต่อทางร้านตอนดึก ทีมงานตอบรับรวดเร็ว จัดส่งชุดถึงหอพักในเวลาไม่ถึงชั่วโมง ชุดสะอาด หอม รีดเรียบสมบูรณ์แบบ พร้อมใส่ได้ทันทีค่ะ"
-              </p>
-            </div>
-            <div class="pt-4 mt-4 border-t border-brand-200/70 flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-brand-300 text-brand-900 font-editorial font-bold flex items-center justify-center text-sm">
-                P
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-brand-900">คุณแพรวา</p>
-                <p class="text-[10px] text-brand-600">นิสิต ม.บูรพา บางแสน</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 2 -->
-          <div class="bg-brand-50 p-6 rounded-2xl border border-brand-200 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-amber-500 mb-3">
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-              </div>
-              <p class="text-xs sm:text-sm text-brand-900 font-light leading-relaxed italic">
-                "เช่าเดรสไปถ่ายภาพที่คาเฟ่ริมทะเลบางแสน ได้ภาพออกมาสวยมาก ทีมงานให้คำแนะนำเรื่องไซส์ได้อย่างแม่นยำ ใส่แล้วพอดีตัวเลยค่ะ คุ้มค่ากว่าซื้อชุดใหม่มากค่ะ"
-              </p>
-            </div>
-            <div class="pt-4 mt-4 border-t border-brand-200/70 flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-brand-300 text-brand-900 font-editorial font-bold flex items-center justify-center text-sm">
-                M
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-brand-900">คุณมายด์</p>
-                <p class="text-[10px] text-brand-600">ลูกค้าพื้นที่ศรีราชา</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Review 3 -->
-          <div class="bg-brand-50 p-6 rounded-2xl border border-brand-200 flex flex-col justify-between">
-            <div>
-              <div class="flex items-center gap-1 text-amber-500 mb-3">
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-                <i data-lucide="star" class="w-4 h-4 fill-amber-500"></i>
-              </div>
-              <p class="text-xs sm:text-sm text-brand-900 font-light leading-relaxed italic">
-                "ชื่นชอบบริการมาก ไม่ต้องซักชุดก่อนส่งคืน ใส่เสร็จเรียกไรเดอร์มารับคืนได้เลย เงินประกันโอนคืนรวดเร็วมากค่ะ แนะนำเพื่อนร่วมงานไปหลายคนแล้ว จะกลับมาใช้บริการอีกแน่นอนค่ะ"
-              </p>
-            </div>
-            <div class="pt-4 mt-4 border-t border-brand-200/70 flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-brand-300 text-brand-900 font-editorial font-bold flex items-center justify-center text-sm">
-                N
-              </div>
-              <div>
-                <p class="text-xs font-semibold text-brand-900">คุณนุ่น</p>
-                <p class="text-[10px] text-brand-600">พนักงานออฟฟิศ แหลมฉบัง</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- ==================== FAQ SECTION ==================== -->
     <section id="faq" class="py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-xl mx-auto mb-12">
@@ -523,7 +505,7 @@
           <h2 class="text-3xl sm:text-4xl font-editorial font-bold text-brand-900 mt-1">
             คำถามที่พบบ่อย
           </h2>
-          <p class="text-sm text-brand-700/80 mt-1 font-light">ข้อมูลเกี่ยวกับค่ามัดจำ การส่งคืนชุด และบริการจัดส่ง</p>
+          <p class="text-sm text-brand-700/80 mt-1 font-light">ข้อมูลเกี่ยวกับการส่งคืนชุด และบริการจัดส่งด่วน</p>
         </div>
 
         <div class="space-y-4" id="faqAccordion">
@@ -541,33 +523,22 @@
           <!-- Q2 -->
           <div class="border border-brand-200 rounded-2xl bg-white overflow-hidden">
             <button onclick="toggleFaq(2)" class="w-full px-6 py-4 text-left font-medium text-brand-900 flex justify-between items-center hover:bg-brand-50/50 transition">
-              <span class="text-sm sm:text-base font-semibold">2. เงินประกันชุดจำนวนเท่าไร และจะได้รับคืนเมื่อใด?</span>
+              <span class="text-sm sm:text-base font-semibold">2. ลูกค้าจำเป็นต้องทำความสะอาดชุดก่อนส่งคืนหรือไม่?</span>
               <i data-lucide="chevron-down" id="faqIcon-2" class="w-5 h-5 text-brand-500 transition-transform"></i>
             </button>
             <div id="faqContent-2" class="px-6 pb-4 text-xs sm:text-sm text-brand-700/90 font-light border-t border-brand-100 hidden pt-3">
-              เงินประกันชุดเริ่มต้นที่ 500–1,000 บาท ขึ้นอยู่กับราคาและแบรนด์ของชุด เมื่อชุดส่งคืนถึงร้านและผ่านการตรวจสอบสภาพเรียบร้อยแล้ว ทางร้านจะโอนเงินประกันคืนให้ภายใน 2–4 ชั่วโมงค่ะ
+              <strong>ไม่จำเป็นค่ะ</strong> เพื่อรักษาคุณภาพเนื้อผ้า ทางร้านมีทีมซักแห้งมืออาชีพคอยดูแลให้ เมื่อใช้งานเสร็จสิ้น เพียงพับชุดใส่ถุงที่ทางร้านจัดเตรียมไว้ให้ แล้วจัดส่งคืนได้ทันทีค่ะ
             </div>
           </div>
 
           <!-- Q3 -->
           <div class="border border-brand-200 rounded-2xl bg-white overflow-hidden">
             <button onclick="toggleFaq(3)" class="w-full px-6 py-4 text-left font-medium text-brand-900 flex justify-between items-center hover:bg-brand-50/50 transition">
-              <span class="text-sm sm:text-base font-semibold">3. ลูกค้าจำเป็นต้องทำความสะอาดชุดก่อนส่งคืนหรือไม่?</span>
+              <span class="text-sm sm:text-base font-semibold">3. กรณีชุดเกิดความเสียหาย มีค่าใช้จ่ายเพิ่มเติมอย่างไร?</span>
               <i data-lucide="chevron-down" id="faqIcon-3" class="w-5 h-5 text-brand-500 transition-transform"></i>
             </button>
             <div id="faqContent-3" class="px-6 pb-4 text-xs sm:text-sm text-brand-700/90 font-light border-t border-brand-100 hidden pt-3">
-              <strong>ไม่จำเป็นค่ะ</strong> เพื่อรักษาคุณภาพเนื้อผ้า ทางร้านมีทีมซักแห้งมืออาชีพคอยดูแลให้ เมื่อใช้งานเสร็จสิ้น เพียงพับชุดใส่ถุงที่ทางร้านจัดเตรียมไว้ให้ แล้วจัดส่งคืนได้ทันทีค่ะ
-            </div>
-          </div>
-
-          <!-- Q4 -->
-          <div class="border border-brand-200 rounded-2xl bg-white overflow-hidden">
-            <button onclick="toggleFaq(4)" class="w-full px-6 py-4 text-left font-medium text-brand-900 flex justify-between items-center hover:bg-brand-50/50 transition">
-              <span class="text-sm sm:text-base font-semibold">4. กรณีชุดเกิดความเสียหาย มีค่าใช้จ่ายเพิ่มเติมอย่างไร?</span>
-              <i data-lucide="chevron-down" id="faqIcon-4" class="w-5 h-5 text-brand-500 transition-transform"></i>
-            </button>
-            <div id="faqContent-4" class="px-6 pb-4 text-xs sm:text-sm text-brand-700/90 font-light border-t border-brand-100 hidden pt-3">
-              คราบสกปรกทั่วไปที่สามารถทำความสะอาดได้ตามปกติ (เช่น เหงื่อ ฝุ่น คราบอาหารเล็กน้อย) ไม่มีค่าใช้จ่ายเพิ่มเติมค่ะ อย่างไรก็ตาม หากเกิดความเสียหายร้ายแรง เช่น รอยไหม้ ขาด หรือคราบฝังแน่นที่ไม่สามารถทำความสะอาดได้ จะมีการหักค่าซ่อมแซมตามจริงจากเงินประกันชุดค่ะ
+              คราบสกปรกทั่วไปที่สามารถทำความสะอาดได้ตามปกติ (เช่น เหงื่อ ฝุ่น คราบอาหารเล็กน้อย) ไม่มีค่าใช้จ่ายเพิ่มเติมค่ะ อย่างไรก็ตาม หากเกิดความเสียหายร้ายแรง เช่น รอยไหม้ ขาด หรือคราบฝังแน่นที่ไม่สามารถทำความสะอาดได้ จะมีการประสานงานประเมินค่าซ่อมแซมตามจริงค่ะ
             </div>
           </div>
         </div>
@@ -584,14 +555,14 @@
             บริการเช่าชุดออกงานและเดรสพรีเมียมสำหรับสุภาพสตรี ครอบคลุมพื้นที่ชลบุรี บางแสน และศรีราชา ด้วยบริการจัดส่งตลอด 24 ชั่วโมง เพื่อให้ท่านพร้อมเปล่งประกายในทุกโอกาสสำคัญ
           </p>
           <div class="pt-2 flex items-center gap-3 text-sm">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-800 flex items-center justify-center text-brand-200 hover:text-white hover:bg-brand-700 transition">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+            <a href="https://www.instagram.com/elune.room?stkn=YW96MngyMTAyZGZy" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-800 hover:bg-brand-700 flex items-center justify-center transition hover:scale-105" title="Instagram">
+              <img src="icon/instagram.png" alt="Instagram" class="w-4 h-4 object-contain">
             </a>
-            <a href="https://line.me" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-800 flex items-center justify-center text-brand-200 hover:text-white hover:bg-brand-700 transition">
-              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <a href="https://lin.ee/8MTJcHB" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-800 hover:bg-brand-700 flex items-center justify-center transition hover:scale-105" title="LINE Official">
+              <img src="icon/line.png" alt="LINE" class="w-4 h-4 object-contain">
             </a>
-            <a href="#" class="w-8 h-8 rounded-full bg-brand-800 flex items-center justify-center text-brand-200 hover:text-white hover:bg-brand-700 transition">
-              <i data-lucide="phone" class="w-4 h-4"></i>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-brand-800 hover:bg-brand-700 flex items-center justify-center transition hover:scale-105" title="Facebook">
+              <img src="icon/facebook.png" alt="Facebook" class="w-4 h-4 object-contain">
             </a>
           </div>
         </div>
@@ -624,93 +595,27 @@
 
   <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3">
     <!-- Floating Messenger Alert Pill -->
-    <div class="hidden sm:flex items-center gap-2 bg-brand-900 text-white text-xs px-3.5 py-1.5 rounded-full shadow-lg border border-brand-700/80 animate-bounce">
-      <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span>จัดส่ง 24 ชม. — ติดต่อทีมงาน</span>
-    </div>
+    <a href="https://lin.ee/8MTJcHB" target="_blank" rel="noopener noreferrer" class="hidden sm:flex items-center gap-2 bg-brand-900 text-white text-xs px-3.5 py-1.5 rounded-full shadow-lg border border-brand-700/80 hover:bg-brand-800 transition">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span>จัดส่ง 24 ชม. — สอบถามคิวชุดทาง LINE</span>
+    </a>
 
     <div class="flex items-center gap-2">
       <!-- Direct LINE Button -->
-      <button onclick="openBookingModal()" class="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-3 rounded-full shadow-xl transition-all duration-300 hover:scale-105">
-        <i data-lucide="message-circle" class="w-5 h-5"></i>
+      <a href="https://lin.ee/8MTJcHB" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 bg-[#06C755] hover:bg-[#05b34c] text-white px-4 py-2.5 rounded-full shadow-xl transition-all duration-300 hover:scale-105" title="ติดต่อทาง LINE Official">
+        <img src="icon/line.png" alt="LINE" class="w-5 h-5 object-contain">
         <span class="text-xs font-medium tracking-wide">LINE: @elune.room</span>
-      </button>
+      </a>
 
       <!-- Quick IG DM Button -->
-      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-12 h-12 bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white rounded-full flex items-center justify-center shadow-xl hover:scale-105 transition-transform" title="Instagram Direct">
-        <i data-lucide="instagram" class="w-5 h-5"></i>
+      <a href="https://www.instagram.com/elune.room?stkn=YW96MngyMTAyZGZy" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-white hover:bg-brand-50 border border-brand-200 shadow-xl rounded-full flex items-center justify-center hover:scale-105 transition-transform" title="Instagram Direct">
+        <img src="icon/instagram.png" alt="Instagram" class="w-6 h-6 object-contain">
       </a>
-    </div>
-  </div>
 
-  <!-- =====================================================
-       BOOKING / INQUIRY MODAL
-       ===================================================== -->
-  <div id="bookingModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-white w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-brand-200 max-h-[90vh] overflow-y-auto">
-      
-      <!-- Close button -->
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-brand-500 hover:text-brand-900 p-1">
-        <i data-lucide="x" class="w-6 h-6"></i>
-      </button>
-
-      <div class="mb-5">
-        <span class="text-xs uppercase tracking-widest text-brand-600 font-medium">Booking & Inquiry</span>
-        <h3 class="text-2xl font-editorial font-bold text-brand-900 mt-1">จองชุด / สอบถามรายละเอียด</h3>
-        <p class="text-xs text-brand-700/80 mt-1">กรุณากรอกข้อมูลด้านล่าง เพื่อให้ทีมงานประสานงานจัดส่งได้อย่างรวดเร็ว</p>
-      </div>
-
-      <form id="inquiryForm" onsubmit="handleInquirySubmit(event)" class="space-y-4 text-xs">
-        <div>
-          <label class="block font-medium text-brand-900 mb-1">ชุดที่สนใจ</label>
-          <select id="modalDressInput" class="w-full p-3 bg-brand-50 border border-brand-200 rounded-xl text-brand-900 focus:outline-none focus:ring-2 focus:ring-brand-500" required>
-            <option value="">— กรุณาเลือกชุดที่ต้องการ —</option>
-            <!-- Options populated dynamically from dressData -->
-          </select>
-        </div>
-
-        <div class="grid grid-cols-2 gap-3">
-          <div>
-            <label class="block font-medium text-brand-900 mb-1">สัดส่วน / ไซส์ (อก-เอว-สะโพก)</label>
-            <input type="text" id="modalSizeInput" class="w-full p-3 bg-brand-50 border border-brand-200 rounded-xl text-brand-900 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="เช่น S (32-25-36)">
-          </div>
-          <div>
-            <label class="block font-medium text-brand-900 mb-1">วันที่ต้องการใช้ชุด</label>
-            <input type="date" id="modalDateInput" class="w-full p-3 bg-brand-50 border border-brand-200 rounded-xl text-brand-900 focus:outline-none focus:ring-2 focus:ring-brand-500" required>
-          </div>
-        </div>
-
-        <div>
-          <label class="block font-medium text-brand-900 mb-1">พื้นที่รับชุด & รูปแบบการจัดส่ง</label>
-          <select id="modalDeliveryInput" class="w-full p-3 bg-brand-50 border border-brand-200 rounded-xl text-brand-900 focus:outline-none focus:ring-2 focus:ring-brand-500">
-            <option value="จัดส่ง 24 ชม. — โซนบางแสน / ม.บูรพา">จัดส่ง 24 ชม. — โซนบางแสน / ม.บูรพา</option>
-            <option value="จัดส่ง 24 ชม. — โซนศรีราชา / ม.เกษตรฯ">จัดส่ง 24 ชม. — โซนศรีราชา / ม.เกษตรฯ</option>
-            <option value="จัดส่ง 24 ชม. — โซนอ่าวอุดม / แหลมฉบัง">จัดส่ง 24 ชม. — โซนอ่าวอุดม / แหลมฉบัง</option>
-            <option value="จัดส่ง 24 ชม. — ตัวเมืองชลบุรี">จัดส่ง 24 ชม. — ตัวเมืองชลบุรี</option>
-            <option value="นัดรับเองที่จุดบริการ">นัดรับเองที่จุดบริการ</option>
-          </select>
-        </div>
-
-        <div>
-          <label class="block font-medium text-brand-900 mb-1">หมายเหตุเพิ่มเติม (ถ้ามี)</label>
-          <textarea id="modalNotesInput" rows="2" class="w-full p-3 bg-brand-50 border border-brand-200 rounded-xl text-brand-900 focus:outline-none focus:ring-2 focus:ring-brand-500" placeholder="เช่น ต้องการใช้ชุดภายใน 2 ชั่วโมง หรือสอบถามไซส์เพิ่มเติม"></textarea>
-        </div>
-
-        <!-- Feedback alert placeholder inside modal -->
-        <div id="modalAlert" class="hidden p-3 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs">
-          คัดลอกข้อความสำเร็จ กำลังนำท่านไปยังแชท LINE...
-        </div>
-
-        <div class="pt-2 flex flex-col gap-2">
-          <button type="submit" class="w-full py-3.5 bg-brand-900 text-white font-medium rounded-xl text-sm hover:bg-brand-800 transition flex items-center justify-center gap-2">
-            <i data-lucide="send" class="w-4 h-4"></i>
-            <span>คัดลอกข้อมูลและเปิดแชท LINE @elune.room</span>
-          </button>
-          <button type="button" onclick="closeBookingModal()" class="w-full py-2.5 bg-transparent text-brand-700 font-medium rounded-xl text-xs hover:bg-brand-100 transition">
-            ปิดหน้าต่าง
-          </button>
-        </div>
-      </form>
+      <!-- Quick Facebook Button -->
+      <a href="#" target="_blank" rel="noopener noreferrer" class="w-11 h-11 bg-white hover:bg-brand-50 border border-brand-200 shadow-xl rounded-full flex items-center justify-center hover:scale-105 transition-transform" title="Facebook Page">
+        <img src="icon/facebook.png" alt="Facebook" class="w-6 h-6 object-contain">
+      </a>
     </div>
   </div>
 
@@ -728,137 +633,127 @@
     const dressData = [
       {
         id: 1,
-        name: "Aura Silk Satin Maxi",
-        category: "gala",
-        tag: "Best Seller",
-        image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["S", "M"],
+        name: "prime_official",
+        category: ["gala"],
+        tag: "ชุดออกงาน ดินเนอร์",
+        image: "picture/1.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 30-33\" • เอว 23-26\" • สะโพก 34-37\"",
+        price1: "฿300",
         price3: "฿490",
-        price5: "฿640",
+        price5: "฿550",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เดรสผ้าซาตินเนื้อหนาพรีเมียม ทรงเข้ารูปผ่าข้าง สง่างามเหมาะสำหรับงานกาล่าและดินเนอร์"
+        desc: "เซตเกาะอกชีฟองสีครีม + กระโปรงยาวทรงสอบ เรียบหรูดูแพง เหมาะกับงานกาล่าและดินเนอร์"
       },
       {
         id: 2,
-        name: "Rosé Champagne Pleat",
-        category: "gala",
-        tag: "Recommended",
-        image: "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["M", "L"],
-        price3: "฿550",
-        price5: "฿700",
+        name: "rudyy.co",
+        category: ["gala", "cafe"],
+        tag: "ออกงาน / คาเฟ่",
+        image: "picture/2.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 26-33\" • เอว 28\" • สะโพก Free Size",
+        price1: "฿200",
+        price3: "฿300",
+        price5: "฿400",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เดรสพลีทระบายสีโรสโกลด์ ดีไซน์เรียบหรู ถ่ายภาพออกมาโดดเด่น เหมาะกับงานแต่งงานและงานเลี้ยง"
+        desc: "เซตคล้องคอลูกไม้ขาว + กระโปรงซาตินกระดุมข้าง ลุคคุณหนูเรียบโก้ ใส่ดินเนอร์หรือคาเฟ่"
       },
       {
         id: 3,
-        name: "Bangsaen Sunset Linen Set",
-        category: "beach",
-        tag: "Vacation",
-        image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["Free Size"],
-        price3: "฿390",
-        price5: "฿500",
+        name: "serly.bkk",
+        category: ["gala", "cafe"],
+        tag: "ออกงาน / คาเฟ่",
+        image: "picture/3.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 29-33\"",
+        price1: "฿150",
+        price3: "฿230",
+        price5: "฿320",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เซตลินินสีครีม ใส่สบาย พลิ้วสวยถ่ายภาพ เหมาะสำหรับเที่ยวชายทะเลบางแสนหรือคาเฟ่โซนอ่างศิลา"
+        desc: "เสื้อคล้องคอปักลูกไม้นู้ดชมพู เว้าเอวข้าง หวานซ่อนเปรี้ยว ใส่ไปดินเนอร์หรือคาเฟ่ชิคๆ"
       },
       {
         id: 4,
-        name: "Noir Velvet Off-Shoulder",
-        category: "prom",
-        tag: "Trending",
-        image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["S", "M"],
-        price3: "฿620",
-        price5: "฿790",
+        name: "rudyy.co",
+        category: ["gala", "cafe"],
+        tag: "ออกงาน / คาเฟ่",
+        image: "picture/4.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 26-33\"",
+        price1: "฿150",
+        price3: "฿230",
+        price5: "฿320",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เดรสกำมะหยี่สีดำเปิดไหล่ ดีไซน์คลาสสิก เสริมบุคลิกให้โดดเด่น เหมาะกับงานพรอมและบายเนียร์"
+        desc: "เกาะอกชีฟองจับเดรปสีครีมงาช้าง ปักดอกไม้ ชายเฉียงพริ้วสวย ใส่ดินเนอร์หรือคาเฟ่ก็ขึ้นกล้อง"
       },
       {
         id: 5,
-        name: "Pearl White Slip Dress",
-        category: "minimal",
-        tag: "Minimal Luxury",
-        image: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["XS", "S", "M"],
-        price3: "฿450",
-        price5: "฿590",
+        name: "rudyy.co",
+        category: ["gala", "cafe"],
+        tag: "ออกงาน / คาเฟ่",
+        image: "picture/5.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 26-33\"",
+        price1: "฿150",
+        price3: "฿230",
+        price5: "฿320",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "สลิปเดรสผ้าไหมซาตินสีขาวมุก เรียบหรูดูแพง สามารถแมตช์เบลเซอร์สำหรับมื้อค่ำ หรือสวมใส่เดี่ยวได้"
+        desc: "เกาะอกชีฟองจับเดรปสีเขียวมิ้นต์ แต่งดอกไม้ลูกไม้ ชายเฉียงระบาย สดใส ขับผิวผ่อง"
       },
       {
         id: 6,
-        name: "Pastel Lavender Chiffon",
-        category: "beach",
-        tag: "Cafe Look",
-        image: "https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["S", "M"],
-        price3: "฿390",
-        price5: "฿520",
+        name: "iceblink.summer",
+        category: ["bikini"],
+        tag: "บิกินี่ เที่ยวทะเล",
+        image: "picture/6.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 28-34\" • เอว 26-29\" • สะโพก 31-36\"",
+        price1: "฿180",
+        price3: "฿250",
+        price5: "฿350",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เดรสชีฟองสีม่วงพาสเทล ลายดอกไม้ ให้ลุคอ่อนหวาน เหมาะสำหรับไปคาเฟ่และถ่ายภาพแสงธรรมชาติ"
+        desc: "บิกินี่ลูกไม้สีขาวครีม Paris Lace เสื้อทรงสามเหลี่ยมผูกหลัง เซ็กซี่ขี้เล่น ถ่ายรูปริมหาดปังมาก"
       },
       {
         id: 7,
-        name: "Emerald Green Backless",
-        category: "gala",
-        tag: "Prom & Gala",
-        image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["M"],
-        price3: "฿590",
-        price5: "฿750",
+        name: "iceblink.summer",
+        category: ["bikini"],
+        tag: "บิกินี่ เที่ยวทะเล",
+        image: "picture/7.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 28-34\" • เอว 26-29\" • สะโพก 31-36\"",
+        price1: "฿180",
+        price3: "฿250",
+        price5: "฿350",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เดรสราตรียาวสีเขียวมรกต ดีไซน์เปิดหลัง โดดเด่นสะดุดตาในทุกงานเลี้ยง"
+        desc: "บิกินี่ลายสก็อตม่วงพาสเทล แต่งลูกไม้และโบว์มิ้นต์ จี้หัวใจ น่ารักสดใสสไตล์เกาหลี"
       },
       {
         id: 8,
-        name: "Beige Knit Bodycon Dress",
-        category: "minimal",
-        tag: "Everyday Chic",
-        image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80",
-        //     ↑ เปลี่ยน URL นี้เพื่ออัปเดตรูปชุด
-        sizes: ["Free Size"],
-        price3: "฿350",
-        price5: "฿480",
+        name: "iceblink.summer",
+        category: ["bikini"],
+        tag: "บิกินี่ เที่ยวทะเล",
+        image: "picture/8.jpg",
+        sizes: ["S-M"],
+        measurements: "อก 28-34\" • เอว 26-29\" • สะโพก 31-36\"",
+        price1: "฿180",
+        price3: "฿250",
+        price5: "฿350",
         status: "พร้อมจัดส่ง",
         statusColor: "emerald",
-        desc: "เดรสไหมพรมถักเนื้อละเอียด ทรงเข้ารูป เหมาะสำหรับวันลำลองหรือนัดรับประทานอาหาร"
+        desc: "บิกินี่ไหมพรมถักโครเชต์ แต่งดอกไม้ชมพู โทนบีชแวร์ริมทะเล เซ็กซี่ละมุนตา เหมาะกับทริปพักผ่อน"
       }
     ];
 
     let currentCategory = 'all';
-
-    // Populate the dress dropdown in the booking modal
-    function populateDressDropdown() {
-      const select = document.getElementById('modalDressInput');
-      // Keep only the default placeholder option
-      select.innerHTML = '<option value="">— กรุณาเลือกชุดที่ต้องการ —</option>';
-      dressData.forEach(item => {
-        const option = document.createElement('option');
-        option.value = `${item.name} (ไซส์: ${item.sizes.join('/')})`;
-        option.textContent = `${item.name} — ${item.sizes.join(', ')} — ${item.price3}/3 วัน`;
-        select.appendChild(option);
-      });
-      // Add a generic inquiry option
-      const otherOption = document.createElement('option');
-      otherOption.value = 'สอบถามชุดอื่นๆ / ยังไม่แน่ใจ';
-      otherOption.textContent = 'สอบถามชุดอื่นๆ / ยังไม่แน่ใจ';
-      select.appendChild(otherOption);
-    }
 
     function renderDresses() {
       const grid = document.getElementById('dressGrid');
@@ -866,7 +761,8 @@
       const query = document.getElementById('dressSearch').value.toLowerCase().trim();
 
       const filtered = dressData.filter(item => {
-        const matchesCategory = (currentCategory === 'all') || (item.category === currentCategory);
+        const matchesCategory = (currentCategory === 'all') || 
+          (Array.isArray(item.category) ? item.category.includes(currentCategory) : item.category === currentCategory);
         const matchesSearch = item.name.toLowerCase().includes(query) ||
                               item.desc.toLowerCase().includes(query) ||
                               item.tag.toLowerCase().includes(query);
@@ -915,28 +811,50 @@
                 <span class="text-brand-500 text-[11px]">ซักอบแห้งพร้อมสวมใส่ ✨</span>
               </div>
 
+              ${item.measurements ? `
+              <p class="text-[11px] text-brand-700/80 mb-1.5 font-light">
+                สัดส่วน: <span class="font-medium text-brand-800">${item.measurements}</span>
+              </p>` : ''}
+
               <h3 class="text-base font-semibold text-brand-900 group-hover:text-brand-600 transition-colors">
                 ${item.name}
               </h3>
 
-              <p class="text-xs text-brand-700/80 mt-1 line-clamp-2 font-light">
+              <p class="text-xs text-brand-700/80 mt-1 font-light leading-relaxed">
                 ${item.desc}
               </p>
             </div>
 
-            <div class="pt-4 mt-3 border-t border-brand-100 flex items-center justify-between">
-              <div>
-                <span class="text-[10px] text-brand-500 uppercase">ค่าเช่าเริ่มต้น (3 วัน)</span>
-                <p class="font-editorial text-lg font-bold text-brand-900">${item.price3}</p>
+            <!-- Rental Pricing Preview: 1, 3, 5 Days -->
+            <div class="mt-4 pt-3 border-t border-brand-100">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[10px] uppercase tracking-wider text-brand-500 font-semibold">อัตราค่าเช่า (Rental Rates)</span>
+                <span class="text-[10px] text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded font-medium">พร้อมส่ง</span>
+              </div>
+              <div class="grid grid-cols-3 gap-1.5 p-2 bg-brand-50/90 rounded-xl border border-brand-200/70 text-center">
+                <div class="py-1">
+                  <span class="block text-[10px] text-brand-600 font-medium">1 วัน</span>
+                  <span class="font-editorial text-sm sm:text-base font-bold text-brand-900">${item.price1}</span>
+                </div>
+                <div class="py-1 border-x border-brand-200/80">
+                  <span class="block text-[10px] text-brand-600 font-medium">3 วัน</span>
+                  <span class="font-editorial text-sm sm:text-base font-bold text-brand-900">${item.price3}</span>
+                </div>
+                <div class="py-1">
+                  <span class="block text-[10px] text-brand-600 font-medium">5 วัน</span>
+                  <span class="font-editorial text-sm sm:text-base font-bold text-brand-900">${item.price5}</span>
+                </div>
               </div>
 
-              <button 
-                onclick="openBookingModalWithDress('${item.name} (ไซส์: ${item.sizes.join('/')})')" 
-                class="px-3.5 py-2 rounded-xl bg-brand-900 hover:bg-brand-700 text-white text-xs font-medium transition flex items-center gap-1 shadow-2xs"
+              <a 
+                href="https://lin.ee/8MTJcHB" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="mt-3 w-full py-2.5 rounded-xl bg-brand-900 hover:bg-brand-700 text-white text-xs font-medium transition flex items-center justify-center gap-1.5 shadow-2xs"
               >
-                <span>สนใจเช่า</span>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
-              </button>
+                <img src="icon/line.png" alt="LINE" class="w-3.5 h-3.5 object-contain">
+                <span>สอบถามคิวชุดนี้ทาง LINE</span>
+              </a>
             </div>
           </div>
         </div>
@@ -988,36 +906,6 @@
       }
     }
 
-    function openBookingModal() {
-      const modal = document.getElementById('bookingModal');
-      // Set minimum date to today
-      const today = new Date().toISOString().split('T')[0];
-      document.getElementById('modalDateInput').min = today;
-      document.getElementById('modalDateInput').value = today;
-
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-    }
-
-    function openBookingModalWithDress(dressName) {
-      openBookingModal();
-      const select = document.getElementById('modalDressInput');
-      // Find and select the matching option
-      for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].value === dressName) {
-          select.selectedIndex = i;
-          break;
-        }
-      }
-    }
-
-    function closeBookingModal() {
-      const modal = document.getElementById('bookingModal');
-      modal.classList.add('hidden');
-      modal.classList.remove('flex');
-      document.getElementById('modalAlert').classList.add('hidden');
-    }
-
     // Mobile Menu Controls
     const mobileBtn = document.getElementById('mobileMenuBtn');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -1029,50 +917,7 @@
       mobileMenu.classList.add('hidden');
     }
 
-    // Form Submission & Clipboard Helper
-    function handleInquirySubmit(e) {
-      e.preventDefault();
-      const dress = document.getElementById('modalDressInput').value;
-      const size = document.getElementById('modalSizeInput').value || 'ยังไม่ระบุ';
-      const date = document.getElementById('modalDateInput').value;
-      const delivery = document.getElementById('modalDeliveryInput').value;
-      const notes = document.getElementById('modalNotesInput').value || '-';
-
-      const inquiryText = `สวัสดีค่ะ สนใจใช้บริการเช่าชุด elune.room ✨\n👗 ชุดที่สนใจ: ${dress}\n📏 ไซส์/สัดส่วน: ${size}\n📅 วันที่ต้องการใช้ชุด: ${date}\n🛵 รูปแบบการจัดส่ง: ${delivery}\n📝 หมายเหตุ: ${notes}`;
-
-      // Copy text to clipboard safely
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(inquiryText).catch(() => {
-          fallbackCopyToClipboard(inquiryText);
-        });
-      } else {
-        fallbackCopyToClipboard(inquiryText);
-      }
-
-      const alertBox = document.getElementById('modalAlert');
-      alertBox.textContent = "คัดลอกข้อความเรียบร้อยแล้ว กำลังนำท่านไปยังแชท LINE @elune.room...";
-      alertBox.classList.remove('hidden');
-
-      setTimeout(() => {
-        window.open('https://line.me', '_blank');
-      }, 1400);
-    }
-
-    function fallbackCopyToClipboard(text) {
-      const tempTextArea = document.createElement("textarea");
-      tempTextArea.value = text;
-      document.body.appendChild(tempTextArea);
-      tempTextArea.select();
-      try {
-        document.execCommand('copy');
-      } catch (err) {
-        console.warn('Clipboard error', err);
-      }
-      document.body.removeChild(tempTextArea);
-    }
-
     window.addEventListener('DOMContentLoaded', () => {
-      populateDressDropdown();
       renderDresses();
       if (window.lucide) {
         lucide.createIcons();
